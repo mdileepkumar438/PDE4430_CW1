@@ -87,7 +87,7 @@ def turtle_move(linear,angular):
 #Main Function to this Program, which calls Teleop() and 
 if __name__ == '__main__':
     try:
-        pub = rospy.Publisher('/turtle1/cmd_vel', Twist, queue_size=1)
+        pub = rospy.Publisher('/turtle1/cmd_vel', Twist, queue_size=10)
         rospy.init_node('Turtlesim_teleoperator', anonymous=False)
         rospy.loginfo("Started publishing values")
         rate = rospy.Rate(100) # 10hz
