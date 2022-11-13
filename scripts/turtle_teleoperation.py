@@ -7,11 +7,10 @@ from geometry_msgs.msg import Twist
 
 #Prints Directional message on Terminal 
 info_msg= """
+
 Reading from the keyboard  and Publishing to Twist!
 ---------------------------------------------------
-Moving around:
-    w
-a   s   d
+
 
 ---------------------------------------------------
 
