@@ -80,6 +80,7 @@ def turtle_move(linear,angular):
         twist.angular.z = angular
         pub.publish(twist)
         rate.sleep()
+        
 
     except Exception as e: #Error In Publishing Twist Message. 
         print(e)
@@ -103,6 +104,7 @@ if __name__ == '__main__':
 
         #Calls Teleop() Function
         Teleop()
+        rospy.spin()
         
     except rospy.ROSInterruptException: 
         pass
