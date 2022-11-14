@@ -14,6 +14,10 @@ Moving around:
     w
 a   s   d
 
+
+
+
+
 ---------------------------------------------------
 
 Up / Down : increase/decrease max speeds
