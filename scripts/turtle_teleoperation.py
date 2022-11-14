@@ -14,6 +14,10 @@ Moving around:
     w
 a   s   d
 
+
+
+
+
 ---------------------------------------------------
 
 Up / Down : increase/decrease max speeds
@@ -39,10 +43,10 @@ def Teleop():
                 rospy.loginfo("Backward")
                 turtle_move(-linear_speed,0.0)
             if key == 100:
-                rospy.loginfo("Right")
+                rospy.loginfo("Right_Turn")
                 turtle_move(0.0,-angular_speed)
             if key == 97:
-                rospy.loginfo("Left")
+                rospy.loginfo("Left_Turn")
                 turtle_move(0.0,angular_speed)
 
             # Variable speed for keys Up / Down / left / Right arrows
@@ -55,16 +59,16 @@ def Teleop():
                 turtle_move(-var_linear_speed,0.0)
 
             if key == 67:
-                rospy.loginfo("Right")
+                rospy.loginfo("Right_Turn")
                 turtle_move(0.0,-var_angular_speed)
 
             if key == 68:
-                rospy.loginfo("Left")
+                rospy.loginfo("Left_Turn")
                 turtle_move(0.0,var_angular_speed)
 
             
 
-    except Exception as e: # could not publish key values to cmd_vel
+    except Exception as e: # could not publish key values to cmd_vel   
         print(e)
 
 
