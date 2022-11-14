@@ -4,16 +4,39 @@ import rospy
 from geometry_msgs.msg import Twist 
 from geometry_msgs.msg import Pose2D 
 from turtlesim import Pose as pose
+from math import pow, atan2, sqrt
 
 #================================================================
 #Calculates distance from Goal 
 # (Current x to destination x coordinat)
 def distancetogoal():
     try:
-        return Des_position.x - Current_position.x
+        Distance = sqrt(pow(Des_position.x - Current_position.x)+pow(Des_position.x - Current_position.y))
+        return Distance
 
     except Exception as e: # Error in Getting the distance to Goal
         print(e)
+
+#================================================================
+def getHeadingError() {
+ 
+  deltaX = Des_position.x - current.x
+  deltaY = Des_position.y - current.y
+
+  Des_Heading = atan2(deltaY, deltaX)
+  headingError = Des_Heading - current.theta
+   
+  #Make sure heading error falls within -PI to PI range
+  if (headingError > PI) {
+    headingError = headingError - (2 * PI);
+  } 
+  if (headingError < -PI) {
+    headingError = headingError + (2 * PI);
+  } 
+   
+  return headingError
+}
+
 
 
 #================================================================
@@ -22,7 +45,10 @@ def distancetogoal():
 def set_velocity():
 
     try:
-        if (abs(distancetogoal())> Dis_tolerance):
+        distancetogoal = distancetogoal()
+        heading_error = getHeadingError()
+
+        if ( gotodestination==True & abs(distancetogoal())> Dis_tolerance):
             vel_command.linear.x = linear_vel * distancetogoal()
 
         else:
@@ -38,9 +64,10 @@ def set_velocity():
 def updatepose(data):  
     try:
         pose = data
-        pose.x = round(pose.x, 4)
-        pose.y = round(pose.y, 4)
-        pose.theta = round (pose.theta, 2)
+        pose.x = pose.x
+        pose.y = pose.y
+        pose.theta = pose.theta
+        
 
     except Exception as e2: #Error in Updating Pose
         print(e2)
@@ -67,13 +94,14 @@ if __name__ == '__main__':
         vel_command = Twist()
         Current_position = Pose2D()
         Des_position = Pose2D()
+        PI = 3.141592654
         
         linear_vel = 0.5
         angular_vel = 0.5
         Dis_tolerance = 0.1
         angular_tolerance = 0.1
         gotodestination = False
-        
+
         #Initialized Variable
         Des_position.x =  5.54
         Des_position.y = 5.54
