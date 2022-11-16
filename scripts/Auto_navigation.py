@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 
 import rospy
-from geometry_msgs.msg import Twist 
-from geometry_msgs.msg import Pose2D 
-from turtlesim import Pose as pose
+from geometry_msgs.msg import Twist
+from turtlesim.msg import Pose
 from math import pow, atan2, sqrt
 
 #================================================================
@@ -18,24 +17,24 @@ def distancetogoal():
         print(e)
 
 #================================================================
-def getHeadingError() {
+def getHeadingError():
  
-  deltaX = Des_position.x - current.x
-  deltaY = Des_position.y - current.y
+  deltaX = Des_position.x - Current_position.x
+  deltaY = Des_position.y - Current_position.y
 
   Des_Heading = atan2(deltaY, deltaX)
-  headingError = Des_Heading - current.theta
+  headingError = Des_Heading - Current_position.theta
    
   #Make sure heading error falls within -PI to PI range
-  if (headingError > PI) {
-    headingError = headingError - (2 * PI);
-  } 
-  if (headingError < -PI) {
-    headingError = headingError + (2 * PI);
-  } 
+  if (headingError > PI): 
+    headingError = headingError - (2 * PI)
+  
+  if (headingError < -PI): 
+    headingError = headingError + (2 * PI)
+  
    
   return headingError
-}
+
 
 
 
@@ -49,51 +48,60 @@ def set_velocity():
         heading_error = getHeadingError()
 
         if ( gotodestination==True & abs(distancetogoal())> Dis_tolerance):
-            vel_command.linear.x = linear_vel * distancetogoal()
+            
+            if (abs(heading_error)> angular_tolerance):            
+                vel_command.linear.x = 0.0
+                vel_command.angular.z = angular_vel * heading_error
+
+            else:
+                
+                vel_command.linear.x = linear_vel * distancetogoal()
+                vel_command.linear.x = 0.0
 
         else:
             rospy.loginfo("Goal has been reached")
-            vel_command.linear.x=0
+            vel_command.linear.x = 0.0
+            vel_command.angular.z= 0.0
+            gotodestination == False
     
     except Exception as e1 : #Error in Settin up the velocity
         print(e1)
 
 
 #================================================================
-#Update the current position and oreintation of Turtle
-def updatepose(data):  
+#=================================================================
+
+#Update the destination point when a messages is published 
+def update_des_pose(data):  
     try:
-        pose = data
-        pose.x = pose.x
-        pose.y = pose.y
-        pose.theta = pose.theta
-        
+        Des_pose = data
+        Des_position.x = Des_pose.x
+        Des_position.y = Des_pose.y
+        gotodestination == True
 
     except Exception as e2: #Error in Updating Pose
         print(e2)
 
 
-#=================================================================
-
-
-
 #Main Function to this Program, which calls Teleop() and 
 if __name__ == '__main__':
     try:
-        # Publisher which will publish to the topic '/turtle1/cmd_vel'
-        pub = rospy.Publisher('/turtle1/cmd_vel', Twist, queue_size=10)
-
-        pose_subscriber = rospy.Subscriber('/turtle1/pose', Pose(), updatepose())
-
         #Creates a node with name 'Turtlesim_Navigation',
         # unique node (using anonymous=True).
-        rospy.init_node('Turtlesim_Navigation', anonymous=True)
+        rospy.init_node('Turtlesim_Auto_Navigation', anonymous=True)
 
+        # Publisher which will publish to '/turtle1/cmd_vel'
+        velocity_publisher = rospy.Publisher('/turtle1/cmd_vel', Twist, queue_size=10)
+
+        # Subscriber which will Subscrib to '/turtle1/pose'
+        pose_subscriber = rospy.Subscriber('/turtle1/pose', Pose, update_des_pose)
+        pose = Pose()
+        rate = rospy.Rate(10)
         rospy.loginfo("Started publishing values")
-        rate = rospy.Rate(10) # 10hz
+
+
         vel_command = Twist()
-        Current_position = Pose2D()
-        Des_position = Pose2D()
+        
         PI = 3.141592654
         
         linear_vel = 0.5
@@ -103,8 +111,14 @@ if __name__ == '__main__':
         gotodestination = False
 
         #Initialized Variable
-        Des_position.x =  5.54
-        Des_position.y = 5.54
+        Current_position = Pose()
+        Des_position = Pose()
+
+        Des_position.x = input("Set your x goal:")
+        Des_position.y = input("Set your y goal:")
+
+        #Des_position.x =  5.54
+        #Des_position.y = 5.54
 
         #Initialized Twist msg
         vel_command.linear.x = 0.0
