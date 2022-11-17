@@ -20,18 +20,12 @@ class Move_turtle:
         
         # Subscriber which will Subscrib to '/turtle1/pose'
         self.pose_subscriber = rospy.Subscriber('/turtle1/pose',Pose, self.update_des_pose)
-        
-
-        
         self.rate = rospy.Rate(10)
         rospy.loginfo("Started publishing values")
         #Initialized Variable
-        
-        
-        PI = 3.141592654
-        
         self.linear_vel = 1.5
         self.angular_vel = 4.0
+        
     #================================================================
     #sets the velocity value, only if not reached the destination
     #else stop the Turtle
