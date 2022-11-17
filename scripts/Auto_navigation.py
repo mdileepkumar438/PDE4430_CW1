@@ -1,134 +1,124 @@
 #!/usr/bin/env python3
 
 import rospy
-from geometry_msgs.msg import Twist
+from geometry_msgs.msg import Twist, Point
 from turtlesim.msg import Pose
 from math import pow, atan2, sqrt
 
-#================================================================
-#Calculates distance from Goal 
-# (Current x to destination x coordinat)
-def distancetogoal():
-    try:
-        Distance = sqrt(pow(Des_position.x - Current_position.x)+pow(Des_position.x - Current_position.y))
-        return Distance
-
-    except Exception as e: # Error in Getting the distance to Goal
-        print(e)
-
-#================================================================
-def getHeadingError():
- 
-  deltaX = Des_position.x - Current_position.x
-  deltaY = Des_position.y - Current_position.y
-
-  Des_Heading = atan2(deltaY, deltaX)
-  headingError = Des_Heading - Current_position.theta
-   
-  #Make sure heading error falls within -PI to PI range
-  if (headingError > PI): 
-    headingError = headingError - (2 * PI)
-  
-  if (headingError < -PI): 
-    headingError = headingError + (2 * PI)
-  
-   
-  return headingError
 
 
+class Move_turtle:
 
 
-#================================================================
-#sets the velocity value, only if not reached the destination
-#else stop the Turtle
-def set_velocity():
-
-    try:
-        distancetogoal = distancetogoal()
-        heading_error = getHeadingError()
-
-        if ( gotodestination==True & abs(distancetogoal())> Dis_tolerance):
-            
-            if (abs(heading_error)> angular_tolerance):            
-                vel_command.linear.x = 0.0
-                vel_command.angular.z = angular_vel * heading_error
-
-            else:
-                
-                vel_command.linear.x = linear_vel * distancetogoal()
-                vel_command.linear.x = 0.0
-
-        else:
-            rospy.loginfo("Goal has been reached")
-            vel_command.linear.x = 0.0
-            vel_command.angular.z= 0.0
-            gotodestination == False
-    
-    except Exception as e1 : #Error in Settin up the velocity
-        print(e1)
-
-
-#================================================================
-#=================================================================
-
-#Update the destination point when a messages is published 
-def update_des_pose(data):  
-    try:
-        Des_pose = data
-        Des_position.x = Des_pose.x
-        Des_position.y = Des_pose.y
-        gotodestination == True
-
-    except Exception as e2: #Error in Updating Pose
-        print(e2)
-
-
-#Main Function to this Program, which calls Teleop() and 
-if __name__ == '__main__':
-    try:
+    def __init__(self):
         #Creates a node with name 'Turtlesim_Navigation',
         # unique node (using anonymous=True).
         rospy.init_node('Turtlesim_Auto_Navigation', anonymous=True)
 
         # Publisher which will publish to '/turtle1/cmd_vel'
-        velocity_publisher = rospy.Publisher('/turtle1/cmd_vel', Twist, queue_size=10)
-
+        self.velocity_publisher = rospy.Publisher('/turtle1/cmd_vel', Twist, queue_size=10)
+        
         # Subscriber which will Subscrib to '/turtle1/pose'
-        pose_subscriber = rospy.Subscriber('/turtle1/pose', Pose, update_des_pose)
-        pose = Pose()
-        rate = rospy.Rate(10)
+        self.pose_subscriber = rospy.Subscriber('/turtle1/pose',Pose, self.update_des_pose)
+        
+
+        
+        self.rate = rospy.Rate(10)
         rospy.loginfo("Started publishing values")
-
-
-        vel_command = Twist()
+        #Initialized Variable
+        
         
         PI = 3.141592654
         
-        linear_vel = 0.5
-        angular_vel = 0.5
-        Dis_tolerance = 0.1
-        angular_tolerance = 0.1
-        gotodestination = False
+        self.linear_vel = 1.5
+        self.angular_vel = 4.0
+    #================================================================
+    #sets the velocity value, only if not reached the destination
+    #else stop the Turtle
+    def Turn_and_Go(self):
 
-        #Initialized Variable
-        Current_position = Pose()
-        Des_position = Pose()
+        try:
+            Des_point.x = float (input("Set your x goal:"))
+            Des_point.y = float(input("Set your y goal:"))
+            Dis_tolerance = 0.1
+            angular_tolerance = 0.1
+            #Calculates the distance between current and destination point
+            #Using Pythogorus 
+            def distancetogoal():
+                try:
+                    
+                    distancetogoal = sqrt(pow((Des_point.x - self.pose.x), 2) + pow((Des_point.y - self.pose.y), 2))
 
-        Des_position.x = input("Set your x goal:")
-        Des_position.y = input("Set your y goal:")
-
-        #Des_position.x =  5.54
-        #Des_position.y = 5.54
-
-        #Initialized Twist msg
-        vel_command.linear.x = 0.0
-        vel_command.linear.y = 0.0
-        vel_command.linear.z = 0.0
-        vel_command.angular.x = 0.0
-        vel_command.angular.y = 0.0
-        vel_command.angular.z = 0.0
+                    return distancetogoal
+                except Exception as e: # Error in Getting the distance to Goal
+                    print(e)
+            #================================================================
+            #Sets the Angle / Head of the turtle to destination point
+            def angle_to_rotate():
         
+                try:
+                    deltaX = Des_point.x - self.pose.x
+                    deltaY = Des_point.y - self.pose.y
+                    #Returns the values in radians
+                    Des_Heading = atan2(deltaY, deltaX)
+                    angle_to_rotate = Des_Heading - self.pose.theta
 
+                    return round(angle_to_rotate,2)
+
+                except Exception as e3: # Error in GetHeading Def.
+                    print(e3)
+            #================================================================
+            #Publishes Twist values to Topic turtle1/cmd_vel
+            def Turtle(linear,angular):
+                vel_command.linear.x = linear
+                vel_command.angular.z = angular
+                self.velocity_publisher.publish(vel_command)
+                self.rate.sleep()
+
+            while not rospy.is_shutdown():
+                
+                while abs(distancetogoal()) >= Dis_tolerance:
+                    #Turns the Turtle to Destination point 
+                    Turtle(0.0,self.angular_vel * angle_to_rotate())   
+                    
+                    # if the Turtle is pointing towards the Destination point 
+                    # and moves towards its Destination
+                    if abs(angle_to_rotate()) == 0.0:
+                        #Moving towards Destination
+                        Turtle(self.linear_vel * distancetogoal(),0.0)
+
+                #if Turtle reaches the Destination
+                rospy.loginfo("Goal has been reached")
+                vel_command.linear.x = 0.0
+                vel_command.angular.z= 0.0
+                self.velocity_publisher.publish(vel_command)
+                self.rate.sleep()
+                break
+            
+        except Exception as e1 : #Error in Settin up the velocity
+            print(e1)
+    #=================================================================
+
+    #Update the destination point when a messages is published 
+    def update_des_pose(self,data):  
+        try:
+            self.pose = data
+            self.pose.x = round(self.pose.x,4)
+            self.pose.y = round(self.pose.y,4)
+            
+
+        except Exception as e2: #Error in Updating Pose
+            print(e2)
+
+#Main Function to this Program, which calls Teleop() and 
+if __name__ == '__main__':
+    try:
         
+        #Testing the function
+        Des_point = Pose()
+        vel_command = Twist()
+        x = Move_turtle()
+        x.Turn_and_Go()
+        rospy.spin()
     except rospy.ROSInterruptException: 
         pass
