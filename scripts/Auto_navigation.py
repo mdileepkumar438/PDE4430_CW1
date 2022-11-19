@@ -20,7 +20,7 @@ class Move_turtle:
         
         # Subscriber which will Subscrib to '/turtle1/pose'
         self.pose_subscriber = rospy.Subscriber('/turtle1/pose',Pose, self.update_des_pose)
-        self.rate = rospy.Rate(10)
+        self.rate = rospy.Rate(50)
         rospy.loginfo("Started publishing values")
         #Initialized Variable
         self.linear_vel = 1.5
@@ -35,7 +35,7 @@ class Move_turtle:
             Des_point.x = float (input("Set your x goal:"))
             Des_point.y = float(input("Set your y goal:"))
             Dis_tolerance = 0.1
-            angular_tolerance = 0.1
+            angular_tolerance = 0.0
             #Calculates the distance between current and destination point
             #Using Pythogorus 
             def distancetogoal():
@@ -77,7 +77,7 @@ class Move_turtle:
                     
                     # if the Turtle is pointing towards the Destination point 
                     # and moves towards its Destination
-                    if abs(angle_to_rotate()) == 0.0:
+                    if abs(angle_to_rotate()) <= angular_tolerance:
                         #Moving towards Destination
                         Turtle(self.linear_vel * distancetogoal(),0.0)
 
