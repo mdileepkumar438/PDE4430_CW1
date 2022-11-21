@@ -32,6 +32,7 @@ class Move_turtle:
     def Turn_and_Go(self):
 
         try:
+            
             Des_point.x = float (input("Set your x goal:"))
             Des_point.y = float(input("Set your y goal:"))
             Dis_tolerance = 0.1

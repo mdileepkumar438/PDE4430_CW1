@@ -90,9 +90,9 @@ def turtle_move(linear,angular):
 if __name__ == '__main__':
     try:
         pub = rospy.Publisher('/turtle1/cmd_vel', Twist, queue_size=10)
-        rospy.init_node('Turtlesim_teleoperator', anonymous=False)
+        rospy.init_node('Turtlesim_teleoperator', anonymous=True)
         rospy.loginfo("Started publishing values")
-        rate = rospy.Rate(100) # 10hz
+        rate = rospy.Rate(50) # 10hz
 
         #Linear and angular speed is set to 1.0 and 0.5 respectively
         linear_speed = 1.0
