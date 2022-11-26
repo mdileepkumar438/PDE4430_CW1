@@ -93,6 +93,7 @@ For program reference [Avoid_collision.py](https://github.com/mdileepkumar438/PD
 - Displaying this message in Terminal
 ``
 x = [0.75, 10.5]
+
 y = [0.75, 10.5]
 ``
 
