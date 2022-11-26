@@ -114,13 +114,25 @@ y = [0.75, 10.5]
 
 ### Task 4: Implementing Vaccum Cleaning Behaviour with maximum accelerations and form a grid path
 
-This Task is mainly focused on the covering the `window` in a `Grid` path, Using the Pre-defined coordinates. 
+This Task is mainly focused on the covering the `window` in a `Grid` path, Using the Pre-defined coordinates. The launch file [Vacuum_cleaner.launch](https://github.com/mdileepkumar438/PDE4430_CW1/blob/main/launch/Vacuum_cleaner.launch)
+
+For program reference : [Vacuum_cleaner.py](https://github.com/mdileepkumar438/PDE4430_CW1/blob/main/scripts/vacuum_cleaner.py)
 
 *Grid*
+
 The grid task can be though as `discrete` sections.
 1.	From any random location, go to the starting position in fastest way possible.
 2.	Thereafter, grid points are `defined` which have to be followed. Hence, `fastest` way would give a curvature and not follow lines. Thus, grid corners are defined.
+3.	Finally, the grid function is defined. Grid_corners contain x,y coordinates,
 
+
+- Type to Launch file ```roslaunch pde4430_cw1 Vacuum_cleaner.launch```
+
+
+- It covers the window in Grid path:
+
+
+- Final Output of this Task
 
 
 
