@@ -7,10 +7,14 @@ The Objective of this coursework is to perform various tasks with turtle, which 
 - Avoiding Wall Collision - override the movement is wall hitting the wall 
 - Vacuum Cleaner Behaviour - covering the entire window in an efficient manner
 
+
+
 ## Projects
 Project folders in this repository are complete on their own and require no additional downloads.
 Contents of each project should be placed in the ```src``` folder of the catkin workspace. To avoid any possible conflicts,
 it's advised to have a separate workspace for every project.
+
+
 
 ## Setup :
 1. ROS Noetic
