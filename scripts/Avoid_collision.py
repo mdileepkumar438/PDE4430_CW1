@@ -54,7 +54,7 @@ class Avoid:
                 angle_to_rotate = Des_Heading - self.pose.theta
                 #add small linear velocity if turtle touches the wall, it turns and move a bit
                 cmd_value.linear.x = 0.2
-                cmd_value.angular.z = 4* angle_to_rotate
+                cmd_value.angular.z = 7* angle_to_rotate
 
                 #Publishes the Twist values to cmd_vel 
                 self.pub.publish(cmd_value)
@@ -72,11 +72,11 @@ class Avoid:
                 avoid_wall()
 
 
-            if (self.pose.x >=x[1]):
+            if (self.pose.x >x[1]):
                 rospy.loginfo("I hit the Right wall")
                 avoid_wall()
 
-            if (self.pose.y >=y[1] ) :
+            if (self.pose.y >y[1] ) :
 
                 rospy.loginfo("I hit the Top wall")
                 avoid_wall()
