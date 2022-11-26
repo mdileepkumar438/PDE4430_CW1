@@ -32,6 +32,10 @@ The launch file [Teleop_key.launch](https://github.com/mdileepkumar438/PDE4430_C
 
 For reference [Turtlesim.py](https://github.com/mdileepkumar438/PDE4430_CW1/blob/main/scripts/turtle_teleoperation.py)
 
+- RQT Graph : type ```rqt_graph```
+
+<img width="1100" alt="Screenshot 2022-11-26 at 11 33 43 PM" src="https://user-images.githubusercontent.com/102908088/204106268-1deb0893-a85e-42fc-ac2b-ab313dd729ac.png">
+
 - Type this command ```roslaunch pde4430_cw1 Teleop_key.launch```
 
 <img width="735" alt="Screenshot 2022-11-26 at 7 12 18 PM" src="https://user-images.githubusercontent.com/102908088/204095814-9b68afec-fad1-427d-b9ba-af102ab7052b.png">
@@ -56,6 +60,11 @@ and angel to rotate the head of the turtle towards the givien coordinate. Howeve
 The launch file [Auto_navigation.launch](https://github.com/mdileepkumar438/PDE4430_CW1/blob/main/launch/Auto_navigation.launch) to reproduce the results.
 
 For reference [Turtlesim.py](https://github.com/mdileepkumar438/PDE4430_CW1/blob/main/scripts/Auto_navigation.py)
+
+- RQT Graph : type ```rqt_graph```
+
+<img width="1100" alt="Screenshot 2022-11-26 at 11 34 41 PM" src="https://user-images.githubusercontent.com/102908088/204106275-da6e0506-a874-4410-947d-5e8938b9a232.png">
+
 
 - Type this command ```roslaunch pde4430_cw1 Auto_navigation.launch```
 
@@ -88,6 +97,11 @@ The Launch file [Avoid_collision.launch](https://github.com/mdileepkumar438/PDE4
 
 For program reference [Avoid_collision.py](https://github.com/mdileepkumar438/PDE4430_CW1/blob/main/scripts/Avoid_collision.py)
 
+- RQT Graph : type ```rqt_graph```
+
+<img width="1100" alt="Screenshot 2022-11-26 at 11 38 48 PM" src="https://user-images.githubusercontent.com/102908088/204106347-cd6a3e5f-9eca-494b-bfe9-dd7eecbc64a8.png">
+
+
 - Type the command ``` roslaunch pde4430_cw1 Avoid_collision.launch ``` :
 
 <img width="735" alt="Screenshot 2022-11-26 at 8 36 08 PM" src="https://user-images.githubusercontent.com/102908088/204099895-e509fe3f-6e10-491b-9164-a55f9431160e.png">
@@ -116,6 +130,11 @@ y = [0.75, 10.5]
 This Task is mainly focused on the covering the `window` in a `Grid` path, Using the Pre-defined coordinates. The launch file [Vacuum_cleaner.launch](https://github.com/mdileepkumar438/PDE4430_CW1/blob/main/launch/Vacuum_cleaner.launch)
 
 For program reference : [Vacuum_cleaner.py](https://github.com/mdileepkumar438/PDE4430_CW1/blob/main/scripts/vacuum_cleaner.py)
+
+- RQT Graph : type ```rqt_graph```
+
+<img width="1100" alt="Screenshot 2022-11-26 at 11 39 40 PM" src="https://user-images.githubusercontent.com/102908088/204106371-c657dc8e-5da2-4c8b-b09f-e4125eeb447f.png">
+
 
 *Grid*
 
