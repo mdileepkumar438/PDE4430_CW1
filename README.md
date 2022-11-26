@@ -63,7 +63,7 @@ For reference [Turtlesim.py](https://github.com/mdileepkumar438/PDE4430_CW1/blob
 <img width="735" alt="Screenshot 2022-11-26 at 8 03 33 PM" src="https://user-images.githubusercontent.com/102908088/204098061-0c98b216-77e1-4c63-ad09-f8a64e1d410b.png">
 
 - Enter the Coordinates Range should be between `[0 - 11]` in both `x`and `y` direction
-```
+``
 [INFO] [1669478618.925063]: Started publishing values
 Set your x goal:1
 Set your y goal:1
@@ -71,7 +71,7 @@ Set your y goal:1
 Set your x goal:1
 Set your y goal:10
 [INFO] [1669478866.082373]: Goal has been reached
-```
+``
 
 - Final `Output` of this Task
 
@@ -134,9 +134,9 @@ The grid task can be though as `discrete` sections.
 
 <img width="700" alt="Screenshot 2022-11-26 at 9 14 10 PM" src="https://user-images.githubusercontent.com/102908088/204101932-d59aa282-d7dd-4357-b3ec-e0c75c493786.png">
 
-<img width="250" alt="Screenshot 2022-11-26 at 9 15 00 PM" src="https://user-images.githubusercontent.com/102908088/204101973-b84ed5c9-c0f9-47c0-878d-9b2f428d442b.png"> <img width="250" alt="Screenshot 2022-11-26 at 9 16 04 PM" src="https://user-images.githubusercontent.com/102908088/204101977-8964bf0d-6454-43fc-a1f7-6ea048e1e839.png">
+<img width="200" alt="Screenshot 2022-11-26 at 9 15 00 PM" src="https://user-images.githubusercontent.com/102908088/204101973-b84ed5c9-c0f9-47c0-878d-9b2f428d442b.png"> <img width="200" alt="Screenshot 2022-11-26 at 9 16 04 PM" src="https://user-images.githubusercontent.com/102908088/204101977-8964bf0d-6454-43fc-a1f7-6ea048e1e839.png">
 
-<img width="250" alt="Screenshot 2022-11-26 at 9 16 58 PM" src="https://user-images.githubusercontent.com/102908088/204102069-6e8f2c1a-2296-4cc1-a031-a529be3776e7.png">
+<img width="200" alt="Screenshot 2022-11-26 at 9 16 58 PM" src="https://user-images.githubusercontent.com/102908088/204102069-6e8f2c1a-2296-4cc1-a031-a529be3776e7.png">
 
 - Final Output of this Task
 
