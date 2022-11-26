@@ -46,7 +46,6 @@ For reference [Turtlesim.py](https://github.com/mdileepkumar438/PDE4430_CW1/blob
 
 <img width="640" alt="Screenshot 2022-11-26 at 7 25 31 PM" src="https://user-images.githubusercontent.com/102908088/204096352-0f7d388a-e866-42b8-9354-4604c83f48ac.png">
 
-Click this link for Video [Teleoperation video]
 
 #
 
@@ -141,4 +140,8 @@ The grid task can be though as `discrete` sections.
 
 <img width="640" alt="Screenshot 2022-11-26 at 9 17 48 PM" src="https://user-images.githubusercontent.com/102908088/204102059-f59c24f6-9eb8-4b80-b59a-07bd569dd09e.png">
 
+
+#
+##Youtube 
+Click this link for Video [Teleoperation video]
 
