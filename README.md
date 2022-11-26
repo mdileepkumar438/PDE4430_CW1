@@ -141,9 +141,9 @@ For program reference [Avoid_collision.py](https://github.com/mdileepkumar438/PD
 
 - Displaying this message in `Terminal`
 ```
+Borders of the wal to avoid :
 x = [0.75, 10.5]  
 y = [0.75, 10.5]
-
 ```
 
 <img width="300" alt="Screenshot 2022-11-26 at 8 37 04 PM" src="https://user-images.githubusercontent.com/102908088/204099902-d703c56d-9b8d-4dce-9e94-6ce38b884550.png">
@@ -165,7 +165,7 @@ y = [0.75, 10.5]
 
 ### Task 4: Implementing Vaccum Cleaning Behaviour with maximum accelerations and form a grid path
 
-This Task is mainly focused on the covering the `window` in a `Grid` path, Using the Pre-defined coordinates. The launch file [Vacuum_cleaner.launch](https://github.com/mdileepkumar438/PDE4430_CW1/blob/main/launch/Vacuum_cleaner.launch)
+This Task is mainly focused on the covering the `Turtlesim window` in a `Grid` path, Using the Pre-defined coordinates. The launch file [Vacuum_cleaner.launch](https://github.com/mdileepkumar438/PDE4430_CW1/blob/main/launch/Vacuum_cleaner.launch)
 
 For program reference : [Vacuum_cleaner.py](https://github.com/mdileepkumar438/PDE4430_CW1/blob/main/scripts/vacuum_cleaner.py)
 
@@ -200,7 +200,7 @@ The grid task can be though as `discrete` sections.
 
 
 #
-## Click this link for Video [Teleoperation video]
+## Click this link for Video [Mobile_robotics_CW_video](https://youtu.be/UmdqTGg1WU8)
 #
  
 
