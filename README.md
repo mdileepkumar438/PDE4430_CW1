@@ -12,3 +12,5 @@ d. Vacuum Cleaner Behaviour - covering the entire window in an efficient manner
 1. ROS Noetic
 2. Ubuntu 20.04
 
+## Tasks
+### Task 2: Navigate the turtlebot from a random location to an input location:
