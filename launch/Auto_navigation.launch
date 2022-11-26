@@ -1,0 +1,4 @@
+<launch>
+    <node name="turtle_window" pkg="turtlesim" type="turtlesim_node" output="screen"/>
+    <node name="Auto_navigation" pkg="pde4430_cw1" type="Auto_navigation.py" output="screen"/>
+</launch>

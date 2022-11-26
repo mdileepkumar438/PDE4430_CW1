@@ -1,0 +1,4 @@
+<launch>
+    <node name="turtle_window" pkg="turtlesim" type="turtlesim_node" output="screen"/>
+    <node name="Vacuum_cleaner_bot" pkg="pde4430_cw1" type="vacuum_cleaner.py" output="screen"/>
+</launch>
