@@ -15,6 +15,7 @@ d. Vacuum Cleaner Behaviour - covering the entire window in an efficient manner
 
 ## Tasks
 ### Task 1: Teleoperating ROS Turtle using a keyboard:
+
 In this Task, we will see how to teleoperate a robot manually using a keyboard. Using a keyboard, we can translate and rotate the robot. One of the basic example to demonstrate keyboard teleoperation is ROS turtlesim.
 The launch file [Teleop_key.launch](https://github.com/mdileepkumar438/PDE4430_CW1/blob/main/launch/Teleop_key.launch) 
 
@@ -35,6 +36,7 @@ The launch file [Teleop_key.launch](https://github.com/mdileepkumar438/PDE4430_C
 Click this link for Video [Teleoperation video]
 
 ### Task 2: Navigate the turtlebot from a random location to an input location:
+
 The parameter for setting linear velocity is taken as distance (always positive) from goal. It could also be (current_coordinate - goal_coordinate), 
 and angel to rotate the head of the turtle towards the givien coordinate. However, this can also be resolved by setting appropriate angular velocities, which is what has been done here.
 The launch file [Auto_navigation.launch](https://github.com/mdileepkumar438/PDE4430_CW1/blob/main/launch/Auto_navigation.launch) to reproduce the results.
@@ -54,15 +56,15 @@ Set your y goal:10
 [INFO] [1669478866.082373]: Goal has been reached
 ```
 
-<img width="700" alt="Screenshot 2022-11-26 at 8 05 23 PM" src="https://user-images.githubusercontent.com/102908088/204098090-f029dc5c-1820-4571-bf89-8cb285beb782.png">
-
 - Final output of this Task
-- 
+
 <img width="640" alt="Screenshot 2022-11-26 at 8 04 12 PM" src="https://user-images.githubusercontent.com/102908088/204098113-dd282ec7-aef5-482e-a82d-bde95d0b629b.png">
 
 
 <img width="640" alt="Screenshot 2022-11-26 at 8 08 02 PM" src="https://user-images.githubusercontent.com/102908088/204098119-d8770706-0012-432f-8560-d04a8f12ade4.png">
 
 
-### Task 3: Avoiding Wall Collion
+### Task 3: Avoiding Wall Collion When it reaches certain pre-defined border:
+
+This Task overwrites the position of the Turtle when ever it reaches the border and makes a turn and also using the ``Teleop_key`` 
 
