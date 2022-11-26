@@ -14,7 +14,24 @@ The Objective of this coursework is to perform various tasks with turtle, which 
 ## Projects
 Project folders in this repository are complete on their own and require no additional downloads.
 Contents of each project should be placed in the ```src``` folder of the catkin workspace. To avoid any possible conflicts,
-it's advised to have a separate workspace for every project.
+it's advised to have a separate workspace for every project. 
+
+<img width="900" alt="Screenshot 2022-11-26 at 11 51 22 PM" src="https://user-images.githubusercontent.com/102908088/204106880-ad56e22b-7cdb-4493-92d3-05d1490a0ebc.png">
+
+
+Every `.py` and `.launch` files needs to be an executable file. 
+
+To do that, Open the `Terminal` Go to File location as shown in below image
+
+<img width="640" alt="Screenshot 2022-11-26 at 11 54 15 PM" src="https://user-images.githubusercontent.com/102908088/204106887-a2aa4694-50de-45a2-af0b-136591021a0f.png">
+
+
+- Type ```chmod +x filename.launch``` for execution of launch file and
+
+<img width="640" alt="Screenshot 2022-11-26 at 11 54 55 PM" src="https://user-images.githubusercontent.com/102908088/204106901-da3f7d9f-bc00-4e07-a2d9-fc444669a1ef.png">
+
+
+- Type ```chmod +x filename.py``` for `.py` files
 
 
 
