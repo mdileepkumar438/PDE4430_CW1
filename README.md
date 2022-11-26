@@ -18,8 +18,9 @@ The Objective of this coursework is to perform various tasks with turtle, which 
 ### Task 1: Teleoperating ROS Turtle using a keyboard:
 
 In this Task, we will see how to teleoperate a robot manually using a keyboard. Using a keyboard, we can translate and rotate the robot. One of the basic example to demonstrate keyboard teleoperation is ROS turtlesim.
-The launch file [Teleop_key.launch](https://github.com/mdileepkumar438/PDE4430_CW1/blob/main/launch/Teleop_key.launch) 
-for reference [Turtlesim.py](https://github.com/mdileepkumar438/PDE4430_CW1/blob/main/scripts/turtle_teleoperation.py)
+The launch file [Teleop_key.launch](https://github.com/mdileepkumar438/PDE4430_CW1/blob/main/launch/Teleop_key.launch).
+
+For reference [Turtlesim.py](https://github.com/mdileepkumar438/PDE4430_CW1/blob/main/scripts/turtle_teleoperation.py)
 
 - Type this command ```roslaunch pde4430_cw1 Teleop_key.launch```
 
@@ -42,7 +43,8 @@ Click this link for Video [Teleoperation video]
 The parameter for setting linear velocity is taken as distance (always positive) from goal. It could also be (current_coordinate - goal_coordinate), 
 and angel to rotate the head of the turtle towards the givien coordinate. However, this can also be resolved by setting appropriate angular velocities, which is what has been done here.
 The launch file [Auto_navigation.launch](https://github.com/mdileepkumar438/PDE4430_CW1/blob/main/launch/Auto_navigation.launch) to reproduce the results.
-for reference [Turtlesim.py](https://github.com/mdileepkumar438/PDE4430_CW1/blob/main/scripts/Auto_navigation.py)
+
+For reference [Turtlesim.py](https://github.com/mdileepkumar438/PDE4430_CW1/blob/main/scripts/Auto_navigation.py)
 
 - Type this command ```roslaunch pde4430_cw1 Auto_navigation.launch```
 
@@ -69,5 +71,8 @@ Set your y goal:10
 
 ### Task 3: Avoiding Wall Collion When it reaches certain pre-defined border:
 
-This Task overwrites the position of the Turtle when ever it reaches the border and makes a turn and also using the ``Teleop_key``, we move the `Turtle`
+This Task overwrites the position of the Turtle when ever it reaches the border and makes a turn and also using the ``Teleop_key`` to move the `Turtle`. 
+The Launch file [Avoid_collision.launch](https://github.com/mdileepkumar438/PDE4430_CW1/blob/main/launch/Avoid_collision.launch) for reporduce the results.
+
+For program reference [Avoid_collision.py](https://github.com/mdileepkumar438/PDE4430_CW1/blob/main/scripts/Avoid_collision.py)
 
