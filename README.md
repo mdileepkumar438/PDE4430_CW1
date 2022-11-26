@@ -36,11 +36,11 @@ For reference [Turtlesim.py](https://github.com/mdileepkumar438/PDE4430_CW1/blob
 
 <img width="735" alt="Screenshot 2022-11-26 at 7 12 18 PM" src="https://user-images.githubusercontent.com/102908088/204095814-9b68afec-fad1-427d-b9ba-af102ab7052b.png">
 
-- Message is displayed in terminal 
+- Message is displayed in `terminal` 
 
 <img width="400" alt="Screenshot 2022-11-26 at 7 17 16 PM" src="https://user-images.githubusercontent.com/102908088/204096230-bd1ed71a-bf27-42db-8831-269fe9663c9a.png">
 
-- Final Output of this task :
+- Final `Output` of this task :
 
 <img width="640" alt="Screenshot 2022-11-26 at 7 16 44 PM" src="https://user-images.githubusercontent.com/102908088/204096289-5b25259d-1c6a-4e04-b8d2-f861a86a527d.png">
 
@@ -62,7 +62,7 @@ For reference [Turtlesim.py](https://github.com/mdileepkumar438/PDE4430_CW1/blob
 
 <img width="735" alt="Screenshot 2022-11-26 at 8 03 33 PM" src="https://user-images.githubusercontent.com/102908088/204098061-0c98b216-77e1-4c63-ad09-f8a64e1d410b.png">
 
-- Enter the Coordinates Range should be between [0 - 11] in both x and y direction
+- Enter the Coordinates Range should be between `[0 - 11]` in both `x`and `y` direction
 ```
 [INFO] [1669478618.925063]: Started publishing values
 Set your x goal:1
@@ -73,7 +73,7 @@ Set your y goal:10
 [INFO] [1669478866.082373]: Goal has been reached
 ```
 
-- Final output of this Task
+- Final `Output` of this Task
 
 <img width="640" alt="Screenshot 2022-11-26 at 8 04 12 PM" src="https://user-images.githubusercontent.com/102908088/204098113-dd282ec7-aef5-482e-a82d-bde95d0b629b.png">
 
@@ -84,7 +84,7 @@ Set your y goal:10
 
 ### Task 3: Avoiding Wall Collion When it reaches certain pre-defined border
 
-This Task overwrites the position of the Turtle when ever it reaches the border and makes a turn and also using the ``Teleop_key`` to move the `Turtle`. 
+This Task overwrites the position of the `Turtle` when ever it reaches the border and makes a turn and also using the ``Teleop_key`` to move the `Turtle`. 
 The Launch file [Avoid_collision.launch](https://github.com/mdileepkumar438/PDE4430_CW1/blob/main/launch/Avoid_collision.launch) for reporduce the results.
 
 For program reference [Avoid_collision.py](https://github.com/mdileepkumar438/PDE4430_CW1/blob/main/scripts/Avoid_collision.py)
@@ -93,7 +93,7 @@ For program reference [Avoid_collision.py](https://github.com/mdileepkumar438/PD
 
 <img width="735" alt="Screenshot 2022-11-26 at 8 36 08 PM" src="https://user-images.githubusercontent.com/102908088/204099895-e509fe3f-6e10-491b-9164-a55f9431160e.png">
 
-- Displaying this message in Terminal
+- Displaying this message in `Terminal`
 ``
 x = [0.75, 10.5]  
 y = [0.75, 10.5]
@@ -101,7 +101,7 @@ y = [0.75, 10.5]
 
 <img width="300" alt="Screenshot 2022-11-26 at 8 37 04 PM" src="https://user-images.githubusercontent.com/102908088/204099902-d703c56d-9b8d-4dce-9e94-6ce38b884550.png">
 
-- Final output of this Task:
+- Final `output` of this Task:
 
 
 <img width="640" alt="Screenshot 2022-11-26 at 8 43 41 PM" src="https://user-images.githubusercontent.com/102908088/204099931-f7a37943-1536-49b7-b5d2-043530ab7589.png">
@@ -114,11 +114,12 @@ y = [0.75, 10.5]
 
 ### Task 4: Implementing Vaccum Cleaning Behaviour with maximum accelerations and form a grid path
 
-This Task is mainly focused on the covering the window in a `Grid` path, Using the Pre-defined coordinates. 
+This Task is mainly focused on the covering the `window` in a `Grid` path, Using the Pre-defined coordinates. 
+
 *Grid*
-The grid task can be though as discrete sections.
+The grid task can be though as `discrete` sections.
 1.	From any random location, go to the starting position in fastest way possible.
-2.	Thereafter, grid points are defined which have to be followed. Hence, fastest way would give a curvature and not follow lines. Thus, grid corners are defined.
+2.	Thereafter, grid points are `defined` which have to be followed. Hence, `fastest` way would give a curvature and not follow lines. Thus, grid corners are defined.
 
 
 
