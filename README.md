@@ -40,12 +40,19 @@ and angel to rotate the head of the turtle towards the givien coordinate. Howeve
 The launch file [Auto_navigation.launch](https://github.com/mdileepkumar438/PDE4430_CW1/blob/main/launch/Auto_navigation.launch) to reproduce the results.
 
 - Type this command ```roslaunch pde4430_cw1 Auto_navigation.launch```
+- 
+<img width="735" alt="Screenshot 2022-11-26 at 8 03 33 PM" src="https://user-images.githubusercontent.com/102908088/204098061-0c98b216-77e1-4c63-ad09-f8a64e1d410b.png">
 
 - Enter the Coordinates Range should be between [0 - 11] in both x and y direction
 
+<img width="400" alt="Screenshot 2022-11-26 at 8 05 23 PM" src="https://user-images.githubusercontent.com/102908088/204098090-f029dc5c-1820-4571-bf89-8cb285beb782.png">
+
 - Final output of this Task
+- 
+<img width="640" alt="Screenshot 2022-11-26 at 8 04 12 PM" src="https://user-images.githubusercontent.com/102908088/204098113-dd282ec7-aef5-482e-a82d-bde95d0b629b.png">
 
 
+<img width="640" alt="Screenshot 2022-11-26 at 8 08 02 PM" src="https://user-images.githubusercontent.com/102908088/204098119-d8770706-0012-432f-8560-d04a8f12ade4.png">
 
 
 ### Task 3: Avoiding Wall Collion
