@@ -42,7 +42,7 @@ and angel to rotate the head of the turtle towards the givien coordinate. Howeve
 The launch file [Auto_navigation.launch](https://github.com/mdileepkumar438/PDE4430_CW1/blob/main/launch/Auto_navigation.launch) to reproduce the results.
 
 - Type this command ```roslaunch pde4430_cw1 Auto_navigation.launch```
-- 
+
 <img width="735" alt="Screenshot 2022-11-26 at 8 03 33 PM" src="https://user-images.githubusercontent.com/102908088/204098061-0c98b216-77e1-4c63-ad09-f8a64e1d410b.png">
 
 - Enter the Coordinates Range should be between [0 - 11] in both x and y direction
@@ -66,5 +66,5 @@ Set your y goal:10
 
 ### Task 3: Avoiding Wall Collion When it reaches certain pre-defined border:
 
-This Task overwrites the position of the Turtle when ever it reaches the border and makes a turn and also using the ``Teleop_key`` 
+This Task overwrites the position of the Turtle when ever it reaches the border and makes a turn and also using the ``Teleop_key``, we move the `Turtle`
 
