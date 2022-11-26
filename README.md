@@ -2,6 +2,10 @@
 
 ## PDE4430_Course_work-1:
 
+#
+## Click this link for Video [Mobile_robotics_CW_video](https://youtu.be/UmdqTGg1WU8)
+#
+
 The Objective of this coursework is to perform various tasks with turtle, which includes;
 
 - Teleoperation using the keyboard, with an option to change speed
@@ -199,9 +203,7 @@ The grid task can be though as `discrete` sections.
 <img width="640" alt="Screenshot 2022-11-26 at 11 39 40 PM" src="https://user-images.githubusercontent.com/102908088/204106371-c657dc8e-5da2-4c8b-b09f-e4125eeb447f.png">
 
 
-#
-## Click this link for Video [Mobile_robotics_CW_video](https://youtu.be/UmdqTGg1WU8)
-#
+
  
 
 
