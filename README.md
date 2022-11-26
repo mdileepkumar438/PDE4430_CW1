@@ -18,15 +18,15 @@ d. Vacuum Cleaner Behaviour - covering the entire window in an efficient manner
 In this Task, we will see how to teleoperate a robot manually using a keyboard. Using a keyboard, we can translate and rotate the robot. One of the basic example to demonstrate keyboard teleoperation is ROS turtlesim.
 The launch file [Teleop_key.launch](https://github.com/mdileepkumar438/PDE4430_CW1/blob/main/launch/Teleop_key.launch) 
 
-Type this command ```roslaunch pde4430_cw1 Teleop_key.launch```
+- Type this command ```roslaunch pde4430_cw1 Teleop_key.launch```
 
 <img width="735" alt="Screenshot 2022-11-26 at 7 12 18 PM" src="https://user-images.githubusercontent.com/102908088/204095814-9b68afec-fad1-427d-b9ba-af102ab7052b.png">
 
-Message is displayed in terminal 
+- Message is displayed in terminal 
 
 <img width="400" alt="Screenshot 2022-11-26 at 7 17 16 PM" src="https://user-images.githubusercontent.com/102908088/204096230-bd1ed71a-bf27-42db-8831-269fe9663c9a.png">
 
-Final Output of this task :
+- Final Output of this task :
 
 <img width="640" alt="Screenshot 2022-11-26 at 7 16 44 PM" src="https://user-images.githubusercontent.com/102908088/204096289-5b25259d-1c6a-4e04-b8d2-f861a86a527d.png">
 
@@ -39,6 +39,14 @@ The parameter for setting linear velocity is taken as distance (always positive)
 and angel to rotate the head of the turtle towards the givien coordinate. However, this can also be resolved by setting appropriate angular velocities, which is what has been done here.
 The launch file [Auto_navigation.launch](https://github.com/mdileepkumar438/PDE4430_CW1/blob/main/launch/Auto_navigation.launch) to reproduce the results.
 
-Step 1 - Type this command ```roslaunch pde4430_cw1 Auto_navigation.launch```
+- Type this command ```roslaunch pde4430_cw1 Auto_navigation.launch```
 
+- Enter the Coordinates Range should be between [0 - 11] in both x and y direction
+
+- Final output of this Task
+
+
+
+
+### Task 3: Avoiding Wall Collion
 
