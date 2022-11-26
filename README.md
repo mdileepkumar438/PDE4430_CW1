@@ -128,8 +128,11 @@ The grid task can be though as `discrete` sections.
 
 - Type to Launch file ```roslaunch pde4430_cw1 Vacuum_cleaner.launch```
 
+<img width="735" alt="Screenshot 2022-11-26 at 9 13 28 PM" src="https://user-images.githubusercontent.com/102908088/204101927-1a64217c-6f9f-4522-afe3-042521de0a91.png">
 
 - It covers the window in Grid path:
+- 
+<img width="700" alt="Screenshot 2022-11-26 at 9 14 10 PM" src="https://user-images.githubusercontent.com/102908088/204101932-d59aa282-d7dd-4357-b3ec-e0c75c493786.png">
 
 
 - Final Output of this Task
