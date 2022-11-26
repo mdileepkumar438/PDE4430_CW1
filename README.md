@@ -39,6 +39,8 @@ For reference [Turtlesim.py](https://github.com/mdileepkumar438/PDE4430_CW1/blob
 
 Click this link for Video [Teleoperation video]
 
+#
+
 ### Task 2: Navigate the turtlebot from a random location to an input location:
 
 The parameter for setting linear velocity is taken as distance (always positive) from goal. It could also be (current_coordinate - goal_coordinate), 
