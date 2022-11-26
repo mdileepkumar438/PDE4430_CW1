@@ -34,7 +34,7 @@ For reference [Turtlesim.py](https://github.com/mdileepkumar438/PDE4430_CW1/blob
 
 - RQT Graph : type ```rqt_graph```
 
-<img width="1100" alt="Screenshot 2022-11-26 at 11 33 43 PM" src="https://user-images.githubusercontent.com/102908088/204106268-1deb0893-a85e-42fc-ac2b-ab313dd729ac.png">
+<img width="640" alt="Screenshot 2022-11-26 at 11 33 43 PM" src="https://user-images.githubusercontent.com/102908088/204106268-1deb0893-a85e-42fc-ac2b-ab313dd729ac.png">
 
 - Type this command ```roslaunch pde4430_cw1 Teleop_key.launch```
 
@@ -63,7 +63,7 @@ For reference [Turtlesim.py](https://github.com/mdileepkumar438/PDE4430_CW1/blob
 
 - RQT Graph : type ```rqt_graph```
 
-<img width="1100" alt="Screenshot 2022-11-26 at 11 34 41 PM" src="https://user-images.githubusercontent.com/102908088/204106275-da6e0506-a874-4410-947d-5e8938b9a232.png">
+<img width="640" alt="Screenshot 2022-11-26 at 11 34 41 PM" src="https://user-images.githubusercontent.com/102908088/204106275-da6e0506-a874-4410-947d-5e8938b9a232.png">
 
 
 - Type this command ```roslaunch pde4430_cw1 Auto_navigation.launch```
@@ -99,7 +99,7 @@ For program reference [Avoid_collision.py](https://github.com/mdileepkumar438/PD
 
 - RQT Graph : type ```rqt_graph```
 
-<img width="1100" alt="Screenshot 2022-11-26 at 11 38 48 PM" src="https://user-images.githubusercontent.com/102908088/204106347-cd6a3e5f-9eca-494b-bfe9-dd7eecbc64a8.png">
+<img width="640" alt="Screenshot 2022-11-26 at 11 38 48 PM" src="https://user-images.githubusercontent.com/102908088/204106347-cd6a3e5f-9eca-494b-bfe9-dd7eecbc64a8.png">
 
 
 - Type the command ``` roslaunch pde4430_cw1 Avoid_collision.launch ``` :
@@ -133,7 +133,7 @@ For program reference : [Vacuum_cleaner.py](https://github.com/mdileepkumar438/P
 
 - RQT Graph : type ```rqt_graph```
 
-<img width="1100" alt="Screenshot 2022-11-26 at 11 39 40 PM" src="https://user-images.githubusercontent.com/102908088/204106371-c657dc8e-5da2-4c8b-b09f-e4125eeb447f.png">
+<img width="640" alt="Screenshot 2022-11-26 at 11 39 40 PM" src="https://user-images.githubusercontent.com/102908088/204106371-c657dc8e-5da2-4c8b-b09f-e4125eeb447f.png">
 
 
 *Grid*
