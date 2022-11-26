@@ -10,6 +10,14 @@ Borders of the wall to avoid :
 
 x = [0.75, 10.5]
 y = [0.75, 10.5]
+
+Move Turtle using:
+
+    ^
+<       >   
+arrow keys
+
+  
 """
 
 
