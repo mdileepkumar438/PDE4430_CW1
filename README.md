@@ -32,9 +32,7 @@ The launch file [Teleop_key.launch](https://github.com/mdileepkumar438/PDE4430_C
 
 For reference [Turtlesim.py](https://github.com/mdileepkumar438/PDE4430_CW1/blob/main/scripts/turtle_teleoperation.py)
 
-- RQT Graph : type ```rqt_graph```
 
-<img width="640" alt="Screenshot 2022-11-26 at 11 33 43 PM" src="https://user-images.githubusercontent.com/102908088/204106268-1deb0893-a85e-42fc-ac2b-ab313dd729ac.png">
 
 - Type this command ```roslaunch pde4430_cw1 Teleop_key.launch```
 
@@ -67,6 +65,9 @@ CTRL + C to quit
 
 <img width="640" alt="Screenshot 2022-11-26 at 7 25 31 PM" src="https://user-images.githubusercontent.com/102908088/204096352-0f7d388a-e866-42b8-9354-4604c83f48ac.png">
 
+- RQT Graph : type ```rqt_graph```
+
+<img width="640" alt="Screenshot 2022-11-26 at 11 33 43 PM" src="https://user-images.githubusercontent.com/102908088/204106268-1deb0893-a85e-42fc-ac2b-ab313dd729ac.png">
 
 #
 
@@ -78,9 +79,6 @@ The launch file [Auto_navigation.launch](https://github.com/mdileepkumar438/PDE4
 
 For reference [Turtlesim.py](https://github.com/mdileepkumar438/PDE4430_CW1/blob/main/scripts/Auto_navigation.py)
 
-- RQT Graph : type ```rqt_graph```
-
-<img width="640" alt="Screenshot 2022-11-26 at 11 34 41 PM" src="https://user-images.githubusercontent.com/102908088/204106275-da6e0506-a874-4410-947d-5e8938b9a232.png">
 
 
 - Type this command ```roslaunch pde4430_cw1 Auto_navigation.launch```
@@ -88,7 +86,7 @@ For reference [Turtlesim.py](https://github.com/mdileepkumar438/PDE4430_CW1/blob
 <img width="735" alt="Screenshot 2022-11-26 at 8 03 33 PM" src="https://user-images.githubusercontent.com/102908088/204098061-0c98b216-77e1-4c63-ad09-f8a64e1d410b.png">
 
 - Enter the Coordinates Range should be between `[0 - 11]` in both `x`and `y` direction
-``
+```
 [INFO] [1669478618.925063]: Started publishing values
 Set your x goal:1
 Set your y goal:1
@@ -96,7 +94,7 @@ Set your y goal:1
 Set your x goal:1
 Set your y goal:10
 [INFO] [1669478866.082373]: Goal has been reached
-``
+```
 
 - Final `Output` of this Task
 
@@ -104,6 +102,10 @@ Set your y goal:10
 
 
 <img width="640" alt="Screenshot 2022-11-26 at 8 08 02 PM" src="https://user-images.githubusercontent.com/102908088/204098119-d8770706-0012-432f-8560-d04a8f12ade4.png">
+
+- RQT Graph : type ```rqt_graph```
+
+<img width="640" alt="Screenshot 2022-11-26 at 11 34 41 PM" src="https://user-images.githubusercontent.com/102908088/204106275-da6e0506-a874-4410-947d-5e8938b9a232.png">
 
 #
 
@@ -114,9 +116,6 @@ The Launch file [Avoid_collision.launch](https://github.com/mdileepkumar438/PDE4
 
 For program reference [Avoid_collision.py](https://github.com/mdileepkumar438/PDE4430_CW1/blob/main/scripts/Avoid_collision.py)
 
-- RQT Graph : type ```rqt_graph```
-
-<img width="640" alt="Screenshot 2022-11-26 at 11 38 48 PM" src="https://user-images.githubusercontent.com/102908088/204106347-cd6a3e5f-9eca-494b-bfe9-dd7eecbc64a8.png">
 
 
 - Type the command ``` roslaunch pde4430_cw1 Avoid_collision.launch ``` :
@@ -124,10 +123,11 @@ For program reference [Avoid_collision.py](https://github.com/mdileepkumar438/PD
 <img width="735" alt="Screenshot 2022-11-26 at 8 36 08 PM" src="https://user-images.githubusercontent.com/102908088/204099895-e509fe3f-6e10-491b-9164-a55f9431160e.png">
 
 - Displaying this message in `Terminal`
-``
+```
 x = [0.75, 10.5]  
 y = [0.75, 10.5]
-``
+
+```
 
 <img width="300" alt="Screenshot 2022-11-26 at 8 37 04 PM" src="https://user-images.githubusercontent.com/102908088/204099902-d703c56d-9b8d-4dce-9e94-6ce38b884550.png">
 
@@ -139,6 +139,10 @@ y = [0.75, 10.5]
 
 <img width="640" alt="Screenshot 2022-11-26 at 8 39 05 PM" src="https://user-images.githubusercontent.com/102908088/204099935-1c550fcd-ca9d-4b5a-9f4f-8f2377a49ba4.png">
 
+- RQT Graph : type ```rqt_graph```
+
+<img width="640" alt="Screenshot 2022-11-26 at 11 38 48 PM" src="https://user-images.githubusercontent.com/102908088/204106347-cd6a3e5f-9eca-494b-bfe9-dd7eecbc64a8.png">
+
 
 #
 
@@ -148,9 +152,6 @@ This Task is mainly focused on the covering the `window` in a `Grid` path, Using
 
 For program reference : [Vacuum_cleaner.py](https://github.com/mdileepkumar438/PDE4430_CW1/blob/main/scripts/vacuum_cleaner.py)
 
-- RQT Graph : type ```rqt_graph```
-
-<img width="640" alt="Screenshot 2022-11-26 at 11 39 40 PM" src="https://user-images.githubusercontent.com/102908088/204106371-c657dc8e-5da2-4c8b-b09f-e4125eeb447f.png">
 
 
 *Grid*
@@ -175,6 +176,10 @@ The grid task can be though as `discrete` sections.
 
 
 <img width="640" alt="Screenshot 2022-11-26 at 9 17 48 PM" src="https://user-images.githubusercontent.com/102908088/204102059-f59c24f6-9eb8-4b80-b59a-07bd569dd09e.png">
+
+- RQT Graph : type ```rqt_graph```
+
+<img width="640" alt="Screenshot 2022-11-26 at 11 39 40 PM" src="https://user-images.githubusercontent.com/102908088/204106371-c657dc8e-5da2-4c8b-b09f-e4125eeb447f.png">
 
 
 #
