@@ -24,7 +24,7 @@ class Move_turtle:
         rospy.loginfo("Started publishing values")
         #Initialized Variable
         self.linear_vel = 1.5
-        self.angular_vel = 4.0
+        self.angular_vel = 5.0
         
     #================================================================
     #sets the velocity value, only if not reached the destination

@@ -5,7 +5,7 @@ from geometry_msgs.msg import Twist, Point
 from turtlesim.msg import Pose
 from math import pow, atan2, sqrt
 
-
+Des_point=Pose()
 
 class Move_turtle:
 
@@ -17,30 +17,30 @@ class Move_turtle:
 
         # Subscriber which will Subscrib to '/turtle1/pose'
         self.pose_subscriber = rospy.Subscriber('/turtle1/pose',Pose, self.update_des_pose)
-        self.pose_subscriber_2 = rospy.Subscriber('/turtle2/pose',Pose, self.update_des_pose)
 
 
         # Publisher which will publish to '/turtle1/cmd_vel'
         self.velocity_publisher = rospy.Publisher('/turtle1/cmd_vel', Twist, queue_size=10)
         
         
-        self.rate = rospy.Rate(50)
+        self.rate = rospy.Rate(100)
         self.pose = Pose()
         rospy.loginfo("Started publishing values")
         #Initialized Variable
-        self.linear_vel = 2.0
-        self.angular_vel = 4.0
+        self.linear_vel = 3.0
+        self.angular_vel = 5.0
         
     #================================================================
     #sets the velocity value, only if not reached the destination
     #else stop the Turtle
-    def Turn_and_Go(self, Des_point):
+    def Turn_and_Go(self, X,Y):
 
         try:
-            
+            Des_point.x = X
+            Des_point.y= Y 
            
             Dis_tolerance = 0.1
-            angular_tolerance = 0.0
+            angular_tolerance = 0.0000
             #Calculates the distance between current and destination point
             #Using Pythogorus 
             def distancetogoal():
@@ -73,26 +73,16 @@ class Move_turtle:
                 vel_command.linear.x = linear
                 vel_command.angular.z = angular
                 self.velocity_publisher.publish(vel_command)
-                self.rate.sleep()
+                #self.rate.sleep()
 
             while not rospy.is_shutdown():
                 
                 while abs(distancetogoal()) >= Dis_tolerance:
-                    #Turns the Turtle to Destination point 
                     Turtle(0.0,self.angular_vel * angle_to_rotate())   
-                    
-                    # if the Turtle is pointing towards the Destination point 
-                    # and moves towards its Destination
                     if abs(angle_to_rotate()) <= angular_tolerance:
-                        #Moving towards Destination
                         Turtle(self.linear_vel * distancetogoal(),0.0)
 
-                #if Turtle reaches the Destination
-                rospy.loginfo("Goal has been reached")
-                vel_command.linear.x = 0.0
-                vel_command.angular.z= 0.0
-                self.velocity_publisher.publish(vel_command)
-                self.rate.sleep()
+                
                 break
             
         except Exception as e1 : #Error in Settin up the velocity
@@ -109,16 +99,38 @@ class Move_turtle:
 
         except Exception as e2: #Error in Updating Pose
             print(e2)
-
+    
+    #Defining cordinates for turtle to perform Grid path in the Window
     def grid(self):
-        Des_point=Pose()
-        grid_corners_1=[(0.5,5.5),(0.5,0.5),(10.5,0.5),(10.5,5),(1,5),(1,1),(9,1),(9,4),(2,4),(2,2),(8,2),(8,3),(3,3),(2.5,3),(2.5,2.5),(5.5,2.5),(5.5,5.5)]
-        grid_corners_2=[(10.5,5.5)]
-        for i in range(len(grid_corners_1)):
-            Des_point.x=grid_corners_1[i][0]
-            Des_point.y=grid_corners_1[i][1]
-            self.Turn_and_Go(Des_point)
-        
+        try:
+            grid_corners_bottom=[(7,7),(0.5,7),(0.5,6),(6,6),(6,5),(1,5)]
+            grid_corners_top=[(10,10),(10,1),(1,1),(1,2),(9,2),(9,9),(0.5,9),(0.5,8),(8,8),(8,3),(1,3),(1,4),(7,4)]
+            Outer_layer=[(0.5,5.5),(0.5,0.5),(10.5,0.5),(10.5,10.5),(0.5,10.5),(0.5,10)]
+
+            for i in range(len(Outer_layer)):
+                a = Outer_layer[i][0] 
+                b = Outer_layer[i][1] 
+                self.Turn_and_Go(a,b)
+            for i in range(len(grid_corners_top)):
+                a = grid_corners_top[i][0] 
+                b = grid_corners_top[i][1] 
+                self.Turn_and_Go(a,b)
+            for i in range(len(grid_corners_bottom)):
+
+                a = grid_corners_bottom[i][0]
+                b = grid_corners_bottom[i][1]
+                self.Turn_and_Go(a,b)
+
+            #if Turtle reaches the Destination
+            rospy.loginfo("Grid is completed")
+            vel_command.linear.x = 0.0
+            vel_command.angular.z= 0.0
+            self.velocity_publisher.publish(vel_command)
+            self.rate.sleep()
+
+        except Exception as e3: # Error in performing grid path
+            print(e3)
+
 
 #Main Function to this Program, 
 if __name__ == '__main__':
@@ -127,6 +139,7 @@ if __name__ == '__main__':
         vel_command = Twist()
         x = Move_turtle()
         x.grid()
+        
         rospy.spin()
     except rospy.ROSInterruptException: 
         pass
