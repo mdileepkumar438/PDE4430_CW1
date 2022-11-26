@@ -26,6 +26,9 @@ Message is displayed in terminal
 
 <img width="400" alt="Screenshot 2022-11-26 at 7 17 16 PM" src="https://user-images.githubusercontent.com/102908088/204096230-bd1ed71a-bf27-42db-8831-269fe9663c9a.png">
 
+Final Output of this task :
+
+<img width="1240" alt="Screenshot 2022-11-26 at 7 16 44 PM" src="https://user-images.githubusercontent.com/102908088/204096289-5b25259d-1c6a-4e04-b8d2-f861a86a527d.png">
 
 
 ### Task 2: Navigate the turtlebot from a random location to an input location:
