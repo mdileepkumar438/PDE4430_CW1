@@ -45,7 +45,7 @@ The launch file [Auto_navigation.launch](https://github.com/mdileepkumar438/PDE4
 
 - Enter the Coordinates Range should be between [0 - 11] in both x and y direction
 
-<img width="400" alt="Screenshot 2022-11-26 at 8 05 23 PM" src="https://user-images.githubusercontent.com/102908088/204098090-f029dc5c-1820-4571-bf89-8cb285beb782.png">
+<img width="700" alt="Screenshot 2022-11-26 at 8 05 23 PM" src="https://user-images.githubusercontent.com/102908088/204098090-f029dc5c-1820-4571-bf89-8cb285beb782.png">
 
 - Final output of this Task
 - 
