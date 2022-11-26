@@ -142,10 +142,8 @@ The grid task can be though as `discrete` sections.
 
 
 #
-## Youtube 
-Click this link for Video [Teleoperation video]
+## Click this link for Video [Teleoperation video]
 #
 
-![yt](https://user-images.githubusercontent.com/102908088/204102297-bc97cd63-01b8-403c-99ae-1daa0d1c4efe.png)
 
 
