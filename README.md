@@ -19,6 +19,7 @@ In this Task, we will see how to teleoperate a robot manually using a keyboard. 
 The launch file [Teleop_key.launch](https://github.com/mdileepkumar438/PDE4430_CW1/blob/main/launch/Teleop_key.launch) 
 
 Step 1 - Type this command ```roslaunch pde4430_cw1 Teleop_key.launch```
+
 <img width="735" alt="Screenshot 2022-11-26 at 7 12 18 PM" src="https://user-images.githubusercontent.com/102908088/204095814-9b68afec-fad1-427d-b9ba-af102ab7052b.png">
 
 
