@@ -33,8 +33,7 @@ class Move_turtle:
 
         try:
             
-            Des_point.x = float (input("Set your x goal:"))
-            Des_point.y = float(input("Set your y goal:"))
+            
             Dis_tolerance = 0.1
             angular_tolerance = 0.0
             #Calculates the distance between current and destination point
@@ -70,8 +69,9 @@ class Move_turtle:
                 self.velocity_publisher.publish(vel_command)
                 self.rate.sleep()
 
-            while not rospy.is_shutdown():
-                
+            while True:
+                Des_point.x = float (input("Set your x goal:"))
+                Des_point.y = float(input("Set your y goal:"))
                 while abs(distancetogoal()) >= Dis_tolerance:
                     #Turns the Turtle to Destination point 
                     Turtle(0.0,self.angular_vel * angle_to_rotate())   
@@ -88,7 +88,7 @@ class Move_turtle:
                 vel_command.angular.z= 0.0
                 self.velocity_publisher.publish(vel_command)
                 self.rate.sleep()
-                break
+                
             
         except Exception as e1 : #Error in Settin up the velocity
             print(e1)

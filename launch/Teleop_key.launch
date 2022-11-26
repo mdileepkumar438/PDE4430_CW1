@@ -1,0 +1,4 @@
+<launch>
+    <node name="turtle_window" pkg="turtlesim" type="turtlesim_node" output="screen"/>
+    <node name="teleop_keys" pkg="pde4430_cw1" type="turtle_teleoperation.py" output="screen"/>
+</launch>

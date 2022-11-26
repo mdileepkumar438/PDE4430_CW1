@@ -13,7 +13,7 @@ class Move_turtle:
     def __init__(self):
         #Creates a node with name 'Turtlesim_Navigation',
         # unique node (using anonymous=True).
-        rospy.init_node('Turtlesim_Auto_Navigation', anonymous=True)
+        rospy.init_node('Turtlesim_Vacuum_cleaner', anonymous=True)
 
         # Subscriber which will Subscrib to '/turtle1/pose'
         self.pose_subscriber = rospy.Subscriber('/turtle1/pose',Pose, self.update_des_pose)
