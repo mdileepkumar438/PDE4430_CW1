@@ -12,13 +12,12 @@ d. Vacuum Cleaner Behaviour - covering the entire window in an efficient manner
 1. ROS Noetic
 2. Ubuntu 20.04
 
-This section is for beginners who haven't worked with teleoperation in ROS yet. In this section, we will see how to teleoperate a robot manually using a keyboard. Using a keyboard, we can translate and rotate the robot. One of the basic example to demonstrate keyboard teleoperation is ROS turtlesim.
-
-The following commands launch turtlesim with keyboard teleoperation. You can run each command on separate Terminals.
-
-Run roscore:
 
 ## Tasks
+### Task 1: Teleoperating ROS Turtle using a keyboard:
+In this Task, we will see how to teleoperate a robot manually using a keyboard. Using a keyboard, we can translate and rotate the robot. One of the basic example to demonstrate keyboard teleoperation is ROS turtlesim.
+The launch file [Teleop_key.launch](https://github.com/mdileepkumar438/PDE4430_CW1/blob/main/launch/Teleop_key.launch)
+
 ### Task 2: Navigate the turtlebot from a random location to an input location:
 The parameter for setting linear velocity is taken as distance (always positive) from goal. It could also be (current_coordinate - goal_coordinate), 
 and angel to rotate the head of the turtle towards the givien coordinate. However, this can also be resolved by setting appropriate angular velocities, which is what has been done here.
