@@ -71,6 +71,7 @@ Set your y goal:10
 
 <img width="640" alt="Screenshot 2022-11-26 at 8 08 02 PM" src="https://user-images.githubusercontent.com/102908088/204098119-d8770706-0012-432f-8560-d04a8f12ade4.png">
 
+#
 
 ### Task 3: Avoiding Wall Collion When it reaches certain pre-defined border:
 
@@ -78,4 +79,26 @@ This Task overwrites the position of the Turtle when ever it reaches the border 
 The Launch file [Avoid_collision.launch](https://github.com/mdileepkumar438/PDE4430_CW1/blob/main/launch/Avoid_collision.launch) for reporduce the results.
 
 For program reference [Avoid_collision.py](https://github.com/mdileepkumar438/PDE4430_CW1/blob/main/scripts/Avoid_collision.py)
+
+- Type the command ``` roslaunch pde4430_cw1 Avoid_collision.launch ``` :
+
+
+- Displaying this message in Terminal
+``
+x = [0.75, 10.5]
+y = [0.75, 10.5]
+``
+
+- Final output of this Task:
+
+
+
+
+
+
+
+
+
+
+
 
