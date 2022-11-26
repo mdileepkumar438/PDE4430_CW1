@@ -42,6 +42,23 @@ For reference [Turtlesim.py](https://github.com/mdileepkumar438/PDE4430_CW1/blob
 
 - Message is displayed in `terminal` 
 
+```
+#Prints Directional message on Terminal 
+info_msg= """
+Reading from the keyboard  and Publishing to Twist!
+---------------------------------------------------
+Moving around:
+    w
+a   s   d
+---------------------------------------------------
+Up / Down : increase/decrease max speeds
+< / > : increase/decrease max angular speed
+---------------------------------------------------
+CTRL + C to quit
+"""
+
+```
+
 <img width="400" alt="Screenshot 2022-11-26 at 7 17 16 PM" src="https://user-images.githubusercontent.com/102908088/204096230-bd1ed71a-bf27-42db-8831-269fe9663c9a.png">
 
 - Final `Output` of this task :
